@@ -13,6 +13,7 @@ class LoanRequestTest extends Simulation {
   val httpConf = http.baseUrl(url)
     .acceptHeader("application/json")
     .contentTypeHeader("application/json")
+    .basicAuth(username, password)
 
   // Request body with loan details
   val loanRequestBody =
