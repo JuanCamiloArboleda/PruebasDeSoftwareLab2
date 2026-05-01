@@ -1,10 +1,23 @@
+<<<<<<< HEAD
 name: Gatling Performance Tests
+=======
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Java CI with Maven
+>>>>>>> 34215ba4ecc396ab52fa03d285f4dbe0ca66abcd
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+<<<<<<< HEAD
   workflow_dispatch:
 
 jobs:
@@ -15,12 +28,23 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
+=======
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+>>>>>>> 34215ba4ecc396ab52fa03d285f4dbe0ca66abcd
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+<<<<<<< HEAD
         
     - name: Compile tests
       run: mvn clean test-compile
@@ -46,3 +70,16 @@ jobs:
           echo "### Última ejecución:" >> $GITHUB_STEP_SUMMARY
           cat target/gatling/lastRun.txt >> $GITHUB_STEP_SUMMARY
         fi
+=======
+    - name: Build with Maven
+      run: mvn -B clean install --file pom.xml
+
+    - name: Test Gatling with Maven
+      run: mvn -B clean gatling:test -Dgatling.runMultipleSimulations=true --file pom.xml
+      
+    - name: Upload Gatling Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: gatling
+        path: target/gatling
+>>>>>>> 34215ba4ecc396ab52fa03d285f4dbe0ca66abcd

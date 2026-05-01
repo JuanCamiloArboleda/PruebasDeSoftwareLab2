@@ -9,8 +9,12 @@
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+<<<<<<< HEAD
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+=======
+    <encoding>UTF-8</encoding>
+>>>>>>> 34215ba4ecc396ab52fa03d285f4dbe0ca66abcd
 
     <gatling.version>3.13.5</gatling.version>
     <gatling-maven-plugin.version>4.16.3</gatling-maven-plugin.version>
