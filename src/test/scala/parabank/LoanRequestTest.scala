@@ -31,9 +31,9 @@ class LoanRequestTest extends Simulation {
     scn.inject(rampUsers(150).during(30.seconds))
   ).protocols(httpConf)
    .assertions(
-     // Tiempo de respuesta promedio debe ser ≤ 5 segundos
-     global.responseTime.mean.lte(5000),
-     // Tasa de exito debe ser ≥ 98%
-     global.successfulRequests.percent.gte(98)
+      // Tiempo de respuesta promedio debe ser ≤ 5 segundos
+      global.responseTime.mean.lte(5000),
+      // Tasa de error no debe superar el 1%
+      global.failedRequests.percent.lte(1)
    )
 }
