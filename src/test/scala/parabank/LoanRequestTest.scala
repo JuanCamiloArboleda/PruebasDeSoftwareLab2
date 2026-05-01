@@ -17,9 +17,9 @@ class LoanRequestTest extends Simulation {
   // Request body with loan details
   val loanRequestBody =
     s"""{
-       |  "customerId": $customerId,
-       |  "amount": $loanAmount,
-       |  "downPayment": $downPayment
+       |  "customerId": "$customerId",
+       |  "amount": "$loanAmount",
+       |  "downPayment": "$downPayment"
        |}""".stripMargin
 
   // 2 Scenario Definition
