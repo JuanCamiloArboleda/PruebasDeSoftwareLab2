@@ -4,7 +4,7 @@
 
 Proyecto de pruebas de rendimiento para la aplicación ParaBank utilizando Gatling 3.13.5 y Scala.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto contiene 5 historias de usuario no funcionales que evalúan el rendimiento de diferentes endpoints de la API de ParaBank:
 
@@ -33,13 +33,13 @@ Este proyecto contiene 5 historias de usuario no funcionales que evalúan el ren
    - ✅ ≤ 3s por transacción
    - ✅ ≤ 1% de errores
 
-## 🚀 Requisitos Previos
+## Requisitos Previos
 
 - Java JDK 17 o superior
 - Maven 3.6+
 - Conexión a Internet (para acceder a ParaBank)
 
-## 📦 Instalación
+## Instalación
 
 1. Clona este repositorio:
 ```bash
@@ -52,7 +52,7 @@ cd PruebasDeSoftwareLab2-main
 mvn clean test-compile
 ```
 
-## ▶️ Ejecución
+## Ejecución
 
 ### Ejecutar todos los tests
 ```bash
@@ -77,7 +77,7 @@ mvn gatling:test -Dgatling.simulationClass=parabank.LoanRequestTest
 mvn gatling:test -Dgatling.simulationClass=parabank.BillPayTest
 ```
 
-## 📊 Reportes
+## Reportes
 
 Los reportes HTML de Gatling se generan automáticamente en:
 ```
@@ -90,7 +90,7 @@ Abre el archivo `index.html` en tu navegador para ver:
 - Distribución de tiempos de respuesta
 - Tasas de éxito/error
 
-## 🔄 GitHub Actions
+## GitHub Actions
 
 El proyecto incluye un workflow de GitHub Actions que:
 - Se ejecuta automáticamente en cada push a `main`
@@ -104,7 +104,7 @@ El proyecto incluye un workflow de GitHub Actions que:
 3. Descarga el artifact "gatling-reports"
 4. Extrae el ZIP y abre `index.html` en tu navegador
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 .
@@ -129,7 +129,7 @@ El proyecto incluye un workflow de GitHub Actions que:
 └── .gitignore                   # Archivos ignorados por Git
 ```
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - **Gatling** 3.13.5 - Framework de pruebas de carga
 - **Scala** - Lenguaje de programación
@@ -137,13 +137,13 @@ El proyecto incluye un workflow de GitHub Actions que:
 - **ParaBank API** - Sistema bajo prueba
 - **GitHub Actions** - CI/CD
 
-## 📝 Notas
+## Notas
 
 - La API de ParaBank es pública y puede tener variabilidad en los tiempos de respuesta
 - Los tests están configurados con umbrales realistas para un entorno de pruebas
 - Se recomienda ejecutar los tests individualmente para evitar sobrecarga del servidor
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor:
 1. Haz fork del proyecto
@@ -152,10 +152,6 @@ Las contribuciones son bienvenidas. Por favor:
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto es de código abierto y está disponible bajo la licencia MIT.
-
-## 📧 Contacto
-
-Para preguntas o sugerencias, abre un issue en el repositorio.
