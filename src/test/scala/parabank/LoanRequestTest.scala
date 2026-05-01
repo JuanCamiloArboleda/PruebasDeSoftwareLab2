@@ -12,16 +12,22 @@ class LoanRequestTest extends Simulation {
   // 1 Http Conf
   val httpConf = http.baseUrl(url)
     .acceptHeader("application/json")
+    .contentTypeHeader("application/json")
+
+  // Request body with loan details
+  val loanRequestBody =
+    s"""{
+       |  "customerId": $customerId,
+       |  "amount": $loanAmount,
+       |  "downPayment": $downPayment
+       |}""".stripMargin
 
   // 2 Scenario Definition
   val scn = scenario("Loan Request - Carga Concurrente")
     .exec(
       http("Request Loan")
         .post("/requestLoan")
-        .queryParam("customerId", customerId)
-        .queryParam("amount", loanAmount)
-        .queryParam("downPayment", downPayment)
-        .header("Accept", "application/xml")
+        .body(StringBody(loanRequestBody))
         .check(status.is(200))
     )
 
